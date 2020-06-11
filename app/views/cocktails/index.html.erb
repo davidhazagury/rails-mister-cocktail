@@ -1,8 +1,8 @@
 <h1>Your list of cocktails:</h1>
-<ul>
+<ul style="list-style: none">
   <% @cocktails.each do |cocktail| %>
   <li>
-    <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+    🍹<%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %>
   </li>
   <% end %>
 </ul>

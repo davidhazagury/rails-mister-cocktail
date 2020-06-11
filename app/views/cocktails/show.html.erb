@@ -1,4 +1,15 @@
 <h1><%= @cocktail.name.capitalize %></h1>
-
-
+<div>
+  <ul style="list-style: none">
+    <% @cocktail.doses.each do |dose|%>
+       <li>
+        ✔︎ <%= dose.description %>: <%= dose.ingredient.name %>
+        </li>
+    <% end %>
+  </ul>
+</div>
+<%= link_to "Add recipe", new_cocktail_dose_path(@cocktail) %>
+<br>
 <%= link_to "Back to list", cocktails_path %>
+
+<!-- TE FALTA AÑADIR EL BOTON DE BORRAR DOSE Y EL METODO EN EL DOSE CONTROLLER -->
