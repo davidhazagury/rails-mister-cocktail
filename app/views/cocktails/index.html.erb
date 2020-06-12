@@ -1,5 +1,15 @@
-<h1>Your list of cocktails:</h1>
-<ul style="list-style: none">
+<div class="banner">
+  <h1>
+    Welcome to Mr. Cocktail
+  </h1>
+  <div class="punchline">
+    <p>Imagine</p>
+    <p>Create</p>
+    <p>Drink</p>
+  </div>
+</div>
+<div class="cocktail-list">
+  <ul style="list-style: none">
   <% @cocktails.each do |cocktail| %>
   <li>
     🍹<%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %>
@@ -8,3 +18,5 @@
 </ul>
 
 <%= link_to "Create a new cocktail", new_cocktail_path %>
+
+</div>

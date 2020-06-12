@@ -1,0 +1,11 @@
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+  height: 100vh;
+  text-align: center;
+  h1 {
+    font-family: $title-font;
+    font-size: 100px;
+    color:white;
+  }
+}
+
