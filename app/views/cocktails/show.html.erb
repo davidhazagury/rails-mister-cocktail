@@ -14,9 +14,8 @@
     </p>
   </div>
 </div>
-
-
-
 <%= link_to "+", new_cocktail_dose_path(@cocktail), class: "btn-addition" %>
-<br>
-<%= link_to "Back to list", cocktails_path %>
+
+<%= link_to cocktails_path, class:"btn-back" do%>
+<i class="fas fa-cocktail"></i>
+<% end %>
