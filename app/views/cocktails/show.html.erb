@@ -7,7 +7,7 @@
     <p>
       <% @cocktail.doses.each do |dose|%>
         ✔︎ <%= dose.description + " :  " + dose.ingredient.name.capitalize %>
-        <%= link_to  dose_path(@cocktail), method: :delete, data: {confirm: "Are you sure?"}  do%>
+        <%= link_to  dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}  do%>
           <i class="far fa-trash-alt"></i>
         <% end %>
       <% end %>
@@ -16,6 +16,6 @@
 </div>
 <%= link_to "+", new_cocktail_dose_path(@cocktail), class: "btn-addition" %>
 
-<%= link_to cocktails_path, class:"btn-back" do%>
+<%= link_to  root_path, class:"btn-back" do%>
 <i class="fas fa-cocktail"></i>
 <% end %>
