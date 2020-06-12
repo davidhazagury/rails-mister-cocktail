@@ -7,16 +7,17 @@
     <p>Create</p>
     <p>Drink</p>
   </div>
+  <%= link_to "Create a new cocktail", new_cocktail_path, class: "btn-banner" %>
 </div>
+
 <div class="cocktail-list">
-  <ul style="list-style: none">
-  <% @cocktails.each do |cocktail| %>
-  <li>
-    🍹<%= link_to cocktail.name.capitalize, cocktail_path(cocktail.id) %>
-  </li>
-  <% end %>
-</ul>
-
-<%= link_to "Create a new cocktail", new_cocktail_path %>
-
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <%= link_to  cocktail_path(cocktail) do%>
+       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+         <%= cocktail.name %>
+       </div>
+       <% end %>
+      <% end %>
+  </div>
 </div>

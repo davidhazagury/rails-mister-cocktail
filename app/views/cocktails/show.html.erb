@@ -1,16 +1,22 @@
-<h1><%= @cocktail.name.capitalize %></h1>
-<div>
-  <ul style="list-style: none">
-    <% @cocktail.doses.each do |dose|%>
-       <li>
-        ✔︎ <%= dose.description %>: <%= dose.ingredient.name %>
-        <%= link_to "Delete dose", dose_path(@cocktail), method: :delete, data: {confirm: "Are you sure?"} %>
-        </li>
-    <% end %>
-  </ul>
+
+
+<div class="card-product">
+  <img src="https://source.unsplash.com/random" alt="product"/>
+  <div class="card-product-infos">
+    <h2><%= @cocktail.name.capitalize %></h2>
+    <p>
+      <% @cocktail.doses.each do |dose|%>
+        ✔︎ <%= dose.description + " :  " + dose.ingredient.name.capitalize %>
+        <%= link_to  dose_path(@cocktail), method: :delete, data: {confirm: "Are you sure?"}  do%>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      <% end %>
+    </p>
+  </div>
 </div>
-<%= link_to "Add recipe", new_cocktail_dose_path(@cocktail) %>
+
+
+
+<%= link_to "+", new_cocktail_dose_path(@cocktail), class: "btn-addition" %>
 <br>
 <%= link_to "Back to list", cocktails_path %>
-
-<!-- TE FALTA AÑADIR EL BOTON DE BORRAR DOSE Y EL METODO EN EL DOSE CONTROLLER -->
