@@ -21,5 +21,3 @@ Ingredient.create(name: "peach")
 Ingredient.create(name: "orange")
 Ingredient.create(name: "white rum")
 
-Cocktail.create(name: "bloodymary")
-Cocktail.create(name: "San Francisco")
