@@ -4,6 +4,9 @@
   border-radius:100%;
   background-color: #7DCE82;
   text-decoration: none;
+  position: relative;
+  bottom: 260px;
+  left: 740px;
 }
 
 .btn-back {
@@ -12,4 +15,18 @@
   border-radius:3px;
   background-color: #7DCE82;
   text-decoration: none;
+}
+.btn-back-new {
+    bottom: 117px;
+    position: absolute;
+    left: 215px;
+}
+#dose {
+  left: 270px;
+}
+#dose-list{
+    position: relative;
+    top: -260px;
+    bottom: 484px;
+    right: -755px;
 }
