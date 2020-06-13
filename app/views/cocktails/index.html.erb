@@ -14,12 +14,10 @@
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
     <%= link_to  cocktail_path(cocktail) do%>
-       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo.key %>)">
          <%= cocktail.name %>
        </div>
        <% end %>
       <% end %>
   </div>
-
-  <%= cl_image_tag("f2bqiuuv1hfjmsoesrw6", width: 400, heigt: 300, crop: :fill) %>
 </div>
